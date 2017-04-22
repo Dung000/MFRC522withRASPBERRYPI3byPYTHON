@@ -4,7 +4,7 @@
 import RPi.GPIO as GPIO
 import MFRC522
 import signal
-
+import time
 continue_reading = True
 
 # Capture SIGINT for cleanup when the script is aborted
@@ -58,4 +58,4 @@ while continue_reading:
             MIFAREReader.MFRC522_StopCrypto1()
         else:
             print "Authentication error"
-
+    time.sleep(1)
